@@ -8,6 +8,8 @@ _(Recommendation: Create a short GIF showing the effects and replace the link ab
 
 <!-- [![Pixel Alchemist Preview](https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO_NAME>/main/.github/assets/pixel-alchemist-preview.gif)](https://pixel-alchemist.vercel.app) -->
 
+[![Pixel Alchemist Preview](https://github.com/AlNahean/pixel-alchemist/blob/main/public/pixel-alchemist-preview.gif?raw=true)](https://pixel-alchemist.vercel.app)
+
 [**pixel-alchemist.vercel.app**](https://pixel-alchemist.vercel.app) _(Replace with your deployed URL)_
 
 ---
