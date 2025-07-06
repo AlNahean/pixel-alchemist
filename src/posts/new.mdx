@@ -1,0 +1,203 @@
+---
+title: The Ultimate MDX Component Showcase
+date: 2024-05-21
+---
+
+Welcome to a live demonstration of custom MDX components. This document showcases everything from basic text styling to complex, interactive elements, all rendered through a custom component map.
+
+The `mdx-components.tsx` file provides a rich set of components to style your content and build interactive documentation. Let's explore them.
+
+---
+
+## Typography & Text Elements
+
+The foundation of any document is its text. All heading levels from `h1` to `h6` are custom styled.
+
+### H3: Digging Deeper
+
+This is an `h3` heading, perfect for sub-sections.
+
+#### H4: Even Deeper
+
+And an `h4` for more specific points.
+
+Here is a blockquote, for quoting important information:
+
+> The art of writing is the art of discovering what you believe.
+
+And here are some lists.
+
+**Unordered List:**
+
+- Item 1: Apples
+- Item 2: Oranges
+- Item 3: Pears
+
+**Ordered List:**
+
+1. First, do this.
+2. Second, do that.
+3. Third, you're done!
+
+## Code Blocks with Copy Button
+
+You can have `inline code` snippets. For larger blocks, use a fenced code block with a language and a `filename` to enable the copy button and source link.
+
+```tsx filename="src/components/hello-world.tsx"
+import * as React from "react";
+
+// This is a simple React component
+export function HelloWorld() {
+  return <h1>Hello, World!</h1>;
+}
+```
+
+```bash filename="install-script.sh"
+# This is a shell script example
+pnpm add @tailwindcss/typography@next
+pnpm install
+pnpm run dev
+```
+
+## Informational Components
+
+Use alerts and callouts to draw attention to important information.
+
+<Alert>
+  <AlertTitle>Heads Up!</AlertTitle>
+  <AlertDescription>
+    This is an alert component. You can use it to notify users about something
+    important.
+  </AlertDescription>
+</Alert>
+
+<br />
+
+<Alert variant="destructive">
+  <AlertTitle>Action Required</AlertTitle>
+  <AlertDescription>
+    Your subscription has expired. Please update your billing information to
+    continue service.
+  </AlertDescription>
+</Alert>
+
+<br />
+
+<Callout emoji="💡">
+  This is a callout with a custom emoji, perfect for bright ideas and pro tips!
+</Callout>
+
+## Interactive Components
+
+MDX allows for powerful interactive components right inside your content.
+
+### Accordion
+
+<Accordion type="single" collapsible className="w-full">
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern for accessibility.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Is it styled?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It comes with default styles that match the other components'
+      aesthetic.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
+### Tabs
+
+<Tabs defaultValue="react" className="w-full">
+  <TabsList>
+    <TabsTrigger value="react">React</TabsTrigger>
+    <TabsTrigger value="vue">Vue</TabsTrigger>
+  </TabsList>
+  <TabsContent value="react">
+    This is the content for the React tab. You can put any MDX content here,
+    including other components like code blocks or alerts.
+  </TabsContent>
+  <TabsContent value="vue">
+    This is the content for the Vue tab. It's a great way to organize
+    information.
+  </TabsContent>
+</Tabs>
+
+## Step-by-Step Guides
+
+The `Steps` and `Step` components are great for creating tutorials.
+
+<Steps>
+  <Step>Clone the Repository</Step>
+
+This is the first step. You need to get the code on your local machine to get started.
+
+```bash
+git clone https://github.com/shadcn-ui/ui.git
+```
+
+{" "}
+
+<Step>Install Dependencies</Step>
+
+Next, navigate into the directory and install the required packages using your favorite package manager.
+
+```bash
+cd ui && pnpm install
+```
+
+{" "}
+
+<Step>Run the Development Server</Step>
+
+Now you're ready to start the development server and see the magic happen.
+
+```bash
+pnpm dev
+```
+
+</Steps>
+
+## Cards and Links
+
+You can use cards to link to other pages or display content in a structured way.
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+  <Card>
+    <h3 className="font-semibold text-lg mb-2">A Simple Card</h3>
+    <p className="text-sm text-muted-foreground">This is a simple card component that can contain any MDX content, but it isn't a link.</p>
+  </Card>
+
+  <LinkedCard href="/posts">
+    <h3 className="font-semibold text-lg mb-2">View All Posts</h3>
+    <p className="text-sm text-muted-foreground">This whole card is a link. Clicking anywhere on it will navigate you to the main posts page.</p>
+  </LinkedCard>
+</div>
+
+## Images and Media
+
+Here is a standard markdown image, which maps to the `img` component.
+![A placeholder image of a forest](https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1280)
+
+And here is the custom Next.js `Image` component, which provides optimization benefits.
+
+<Image
+  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1280"
+  width={1280}
+  height={854}
+  alt="A majestic landscape with mountains and a lake"
+/>
+
+You can also use `AspectRatio` to maintain a specific ratio for media.
+
+<AspectRatio ratio={16 / 9} className="bg-muted mt-6">
+  <Image
+    src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&q=80"
+    alt="A beautiful watercolor background"
+    fill
+    className="rounded-md object-cover"
+  />
+</AspectRatio>

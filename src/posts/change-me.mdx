@@ -1,0 +1,64 @@
+---
+title: Change me!
+date: 2022-03-11
+---
+
+When you change a source file, Contentlayer automatically updates the content cache, which prompts Next.js to reload the content on screen.
+This document serves as a live demonstration of how different Markdown and MDX elements are rendered using your custom components. When you change this file, Contentlayer automatically updates the content, and Next.js reloads the page.
+
+## Standard Markdown Elements
+
+First, let's cover the basics.
+
+### Lists
+
+Here is an unordered list:
+
+- **Bold Item:** This tests bold text within a list item.
+- _Italic Item:_ This tests italic text.
+- `Inline Code Item`: This tests `inline code` formatting.
+- A plain list item.
+
+And an ordered list for sequential steps:
+
+1. First, you configure your components.
+2. Second, you write your content in MDX.
+3. Finally, everything renders beautifully.
+
+### Blockquote
+
+> This is a blockquote. It's useful for highlighting a key takeaway or a quote from another source. The styling should come from your `blockquote` component.
+
+---
+
+## GitHub Flavored Markdown (GFM)
+
+Thanks to the `remark-gfm` plugin, we can use features like tables.
+
+### Table
+
+This table should be fully styled with borders and alternating row colors.
+
+| Framework |  Language  | Stars (Approx) |
+| --------- | :--------: | -------------: |
+| Next.js   | TypeScript |          110k+ |
+| Nuxt.js   | TypeScript |           47k+ |
+| SvelteKit | TypeScript |           16k+ |
+| Remix     | TypeScript |           25k+ |
+
+## Code Blocks
+
+The `rehype-pretty-code` plugin provides syntax highlighting. The code block below should have a dark theme and line numbers.
+
+```javascript
+// A simple function to add two numbers
+function add(a, b) {
+  if (typeof a !== "number" || typeof b !== "number") {
+    throw new Error("Both arguments must be numbers.");
+  }
+  return a + b;
+}
+
+const result = add(5, 10);
+console.log(`The result is: ${result}`); // The result is: 15
+```
