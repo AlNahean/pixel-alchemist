@@ -24,7 +24,7 @@ import { PostProcessing } from '@/components/post-processing';
 
 // My main switch for turning the upload feature on or off.
 // If I set this to 'false', the app will only show the demo image and hide all upload UI.
-const ALLOW_IMAGE_UPLOADING = true;
+const ALLOW_IMAGE_UPLOADING = false;
 
 // Here's the config for the default images that load on startup.
 // I need to make sure these files are in the `public` folder and that I get the
